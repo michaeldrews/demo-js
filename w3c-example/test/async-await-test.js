@@ -32,6 +32,7 @@ let username = process.env.SAUCE_USERNAME,
             .build();
         await driver.getSession().then(function (sessionid) {
             driver.sessionID = sessionid.id_;
+            console.log('SauceOnDemandSessionID=' + driver.sessionID + ' job-name=' + 'async-await-test');
         });
     });
 
